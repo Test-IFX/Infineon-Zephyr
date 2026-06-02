@@ -1,15 +1,12 @@
 # Infineon Zephyr Support Status (Prototype)
 
-This page is a prefilled prototype for an Infineon Zephyr support dashboard.
-The structure is intentionally modeled after Espressif's Zephyr support status page:
-`https://developer.espressif.com/software/zephyr-support-status/`
-
 ## General Information
 
 Use this repository to answer three questions quickly:
 - Which Infineon devices are usable with Zephyr today
 - Which features are production-ready vs in-progress
 - Which reference examples are available per platform
+- How can I Contribute to the Infineon Zephyr project?
 
 
 ## Device Support Information
@@ -75,8 +72,6 @@ This section maps common Zephyr samples to Infineon targets and expected maturit
 
 ## Zephyr Releases and Device Plan
 
-This prototype follows a rolling-upstream approach similar to Espressif's guidance.
-
 | Zephyr Train | Timeline (tentative) | Infineon Focus | Notes |
 |---|---|---|---|
 | 4.2 baseline | Current | Stabilize PSoC 6 + XMC4000 baseline | Freeze smoke test set |
@@ -84,29 +79,7 @@ This prototype follows a rolling-upstream approach similar to Espressif's guidan
 | 4.4 | Following cycle | AURIX feasibility checkpoints | Safety and multicore constraints review |
 | LTS track | Per Zephyr roadmap | Backfix policy only | No long-lived fork strategy |
 
-## Best Release Guidance (Prototype Policy)
+## Zephyr Releases and Device Plan
+Want to Contribute to Infineon's Zephyr Project?
+(Guidelines)
 
-- For active development, use latest upstream Zephyr mainline hash that passes CI.
-- For productization, pin to a tested commit manifest, not just a version number.
-- Keep downstream patches minimal and upstream-first whenever possible.
-
-## Known Gaps and Risks
-
-| Gap | Impact | Mitigation | Target |
-|---|---|---|---|
-| Incomplete board CI coverage | Regressions may be detected late | Add nightly board/sample matrix | 2026-Q3 |
-| Mixed maturity across families | Messaging confusion for users | Keep matrix and legend updated weekly | Ongoing |
-| Connectivity story fragmentation | Slower adoption for IoT users | Publish clear hosted vs native guidance | 2026-Q3 |
-
-## Disclaimers
-
-- This repository tracks Infineon's support view and planning signals; final Zephyr decisions remain with upstream governance.
-- Release timing and support status can change based on upstream merges, silicon availability, and validation outcomes.
-- Prototype tables are prefilled to accelerate alignment and should be treated as planning data until validated.
-
-## Maintainer Workflow
-
-1. Update status markers only with evidence (CI result, test log, or merged upstream PR).
-2. Keep example table tied to reproducible commands and board targets.
-3. Reconcile this page with every Zephyr release milestone.
-4. Link key issues/PRs in future revisions as this prototype evolves.
